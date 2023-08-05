@@ -1,7 +1,8 @@
 {
-  "name": "typescript-jest",
+  "name": "typescript-vite-jest",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "dev": "vite",
