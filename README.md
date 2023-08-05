@@ -50,6 +50,18 @@ $ vim package.json
 $ mkdir test
 ```
 
+```json
+$ vim tsconfig.json
+
+  "noUnusedLocals": false, // true -> false
+```
+
+axios
+
+```sh
+$ npm install axios
+```
+
 ```ts
 $ vim src/sum.ts
 
