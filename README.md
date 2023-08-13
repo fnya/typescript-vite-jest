@@ -74,6 +74,10 @@ $ vim tsconfig.json
 
   "noUnusedLocals": false, // true -> false
 
+# UI テスト用のライブラリをインストール
+$ npm install --save-dev jest-environment-jsdom
+$ npm install --save-dev @testing-library/react
+$ npm install --save-dev react-test-renderer @types/react-test-renderer
 
 # テスト対象プログラムを作成
 $ vim src/sum.ts

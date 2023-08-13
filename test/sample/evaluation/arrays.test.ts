@@ -8,6 +8,10 @@ describe('配列の結果を判定する', () => {
     { name: 'mouse', age: 3 },
   ];
 
+  test('配列が一致する場合は true とする', () => {
+    expect(animals).toEqual(animals);
+  });
+
   test('配列を含む場合は true とする', () => {
     expect(animals).toEqual(expect.arrayContaining(['dog', 'cat']));
     expect(animals).toContain('mouse');
@@ -16,6 +20,16 @@ describe('配列の結果を判定する', () => {
   test('配列を含まない場合は true とする', () => {
     expect(animals).not.toEqual(expect.arrayContaining(['snake', 'pig']));
     expect(animals).not.toContain('snake');
+  });
+
+  test('オブジェクトの配列を含む場合は true とする', () => {
+    expect(objectAnimals).toEqual(
+      expect.arrayContaining([
+        { name: 'dog', age: 1 },
+        { name: 'cat', age: 2 },
+      ])
+    );
+    expect(objectAnimals).toContainEqual({ name: 'dog', age: 1 });
   });
 
   test('オブジェクトの配列を含まない場合は true とする', () => {

@@ -11,6 +11,10 @@ describe('オブジェクトで結果を判定する', () => {
     },
   };
 
+  test('オブジェクトが一致する場合は true とする', () => {
+    expect(user).toEqual(user);
+  });
+
   test('プロパティが一致するか判定する', () => {
     expect(user).toHaveProperty('id', 1);
   });
